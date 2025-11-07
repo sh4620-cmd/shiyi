@@ -1,1 +1,8 @@
+ipykernel
+pandas
+plotly
 jupyter-book==1.*
+
+# needed for plotly
+nbformat
+statsmodels
