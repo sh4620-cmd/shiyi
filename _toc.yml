@@ -1,7 +1,11 @@
 format: jb-book
 root: index
 chapters:
-  - file: lecture_16_example.ipynb
+  - file: lecture_16_example
+  - sections:
+      - file: Project_1_part1
+      - file: Project_1_part2
+    
   - file: Project_1
 
   
