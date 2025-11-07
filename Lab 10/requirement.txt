@@ -1,7 +1,0 @@
-ipykernel #Jupyter to work
-pandas # handling
-plotly # data visualizaton
-
-# needed for plotly
-nbformat
-statsmodels
