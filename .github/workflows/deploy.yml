@@ -54,7 +54,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
         with:
-          path: _build/html
+          path: file:///Users/cc/Desktop/Python/Shiyi.github.io/_build/html/index.html
 
       # Deploy the book's HTML to GitHub Pages
       - name: Deploy to GitHub Pages
