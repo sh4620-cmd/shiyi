@@ -53,7 +53,7 @@ jobs:
       uses: actions/upload-pages-artifact@v3
       with:
         path: "_build/html"
-file:///Users/cc/Desktop/Python/Shiyi.github.io/_build/html/index.html
+https://sh4620-cmd.github.io/shiyi/
 
     # Deploy the book's HTML to GitHub Pages
     - name: Deploy to GitHub Pages
