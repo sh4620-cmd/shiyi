@@ -2,7 +2,7 @@
 import csv
 
 # read the CSV file
-df = "/Users/cc/Desktop/Python/Shiyi.github.io/Project 1/NYPD_Arrest_Data__Year_to_Date_.csv"
+df = "NYPD_Arrest_Data__Year_to_Date_.csv"
 
 # read the column names
 column_name = 'ARREST_PRECINCT'
