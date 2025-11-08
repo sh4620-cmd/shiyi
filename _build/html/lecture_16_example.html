@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>&lt;no title&gt; &#8212; Shiyi Huang&#39;s Portfolio</title>
+    <title>Lecture 16: Python and Jupyter &#8212; Shiyi Huang&#39;s Portfolio</title>
   
   
   
@@ -173,7 +173,10 @@
                 </a>
             </li>
         </ul>
-        
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Lecture 16: Python and Jupyter</a></li>
+</ul>
+
     </div>
 </nav></div>
     </div>
@@ -310,7 +313,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1><no title></h1>
+    <h1>Lecture 16: Python and Jupyter</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -319,9 +322,41 @@ document.write(`
                 <h2> Contents </h2>
             </div>
             <nav aria-label="Page">
-                <ul class="simple visible nav section-nav flex-column">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spreadsheets-vs-programming-languages">Spreadsheets vs. programming languages</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-spreadsheets">Why spreadsheets</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-programming-languages">Why programming languages</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#side-by-side1">Side-by-side<sup>1</sup></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spreadsheet-scripting-automation">Spreadsheet scripting/automation</a></li>
 </ul>
-
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-vs-other-languages">Python vs. other languages</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#where-to-python">Where to Python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pandas">Pandas</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jupyter">Jupyter</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#command-line-vs-jupyter">Command line vs. Jupyter</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lab-8-prep"><span class="xref myst">Lab 8</span> prep</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#personal-site-folder-setup">Personal site folder setup</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#folder-structure">Folder structure</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-the-virtual-environment">Create the virtual environment</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-initial-packages"><span class="xref myst">Install initial packages</span></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jupyter-continued">Jupyter, continued</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#common-issues">Common issues</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-multiple-cells">Using multiple cells</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#jupyter-basics">Jupyter basics</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#running">Running</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#output">Output</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hosted-notebooks">Hosted notebooks</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#some-best-practices">Some best practices</a></li>
+</ul>
+</li>
+</ul>
             </nav>
         </div>
     </div>
@@ -332,8 +367,379 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <p>Example</p>
-<p>Title</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="lecture-16-python-and-jupyter">
+<h1>Lecture 16: Python and Jupyter<a class="headerlink" href="#lecture-16-python-and-jupyter" title="Link to this heading">#</a></h1>
+<section id="spreadsheets-vs-programming-languages">
+<h2>Spreadsheets vs. programming languages<a class="headerlink" href="#spreadsheets-vs-programming-languages" title="Link to this heading">#</a></h2>
+<p>What do you like about spreadsheets?</p>
+<section id="why-spreadsheets">
+<h3>Why spreadsheets<a class="headerlink" href="#why-spreadsheets" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>The easy stuff is easy</p></li>
+<li><p>Lots of people know how to use them</p></li>
+<li><p>Mostly just have to point, click, and scroll</p></li>
+<li><p>Data and logic live together as one</p></li>
+</ul>
+</section>
+<section id="why-programming-languages">
+<h3>Why programming languages<a class="headerlink" href="#why-programming-languages" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Data and logic <em>don’t</em> live together</p>
+<ul>
+<li><p>Why might this matter?</p></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>More powerful, flexible, and expressive than spreadsheet formulas; don’t have to cram into a single line</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">=</span><span class="n">SUM</span><span class="p">(</span><span class="n">INDEX</span><span class="p">(</span><span class="n">C3</span><span class="p">:</span><span class="n">E9</span><span class="p">,</span><span class="n">MATCH</span><span class="p">(</span><span class="n">B13</span><span class="p">,</span><span class="n">C3</span><span class="p">:</span><span class="n">C9</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span><span class="n">MATCH</span><span class="p">(</span><span class="n">B14</span><span class="p">,</span><span class="n">C3</span><span class="p">:</span><span class="n">E3</span><span class="p">,</span><span class="mi">0</span><span class="p">)))</span>
+</pre></div>
+</div>
+</li>
+<li><p>Better at working with large data</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://support.google.com/drive/answer/37603">Google Sheets</a> and <a class="reference external" href="https://support.microsoft.com/en-us/office/excel-specifications-and-limits-1672b34d-7043-467e-8e27-269d656771c3">Excel</a> have hard limits at 1-5 million rows, but get slow long before that</p></li>
+</ul>
+</li>
+<li><p>Reusable code (packages)</p></li>
+<li><p>Automation</p></li>
+</ul>
+</section>
+<section id="side-by-side1">
+<h3>Side-by-side<sup>1</sup><a class="headerlink" href="#side-by-side1" title="Link to this heading">#</a></h3>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-right"><p>Task</p></th>
+<th class="head text-center"><p>Spreadsheets</p></th>
+<th class="head text-center"><p>Programming Languages</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-right"><p><strong>Loading data</strong></p></td>
+<td class="text-center"><p>Easy</p></td>
+<td class="text-center"><p>Medium</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><strong>Viewing data</strong></p></td>
+<td class="text-center"><p>Easy</p></td>
+<td class="text-center"><p>Medium</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><strong>Filtering data</strong></p></td>
+<td class="text-center"><p>Easy</p></td>
+<td class="text-center"><p>Medium</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><strong>Manipulating data</strong></p></td>
+<td class="text-center"><p>Medium</p></td>
+<td class="text-center"><p>Medium</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><strong>Joining data</strong></p></td>
+<td class="text-center"><p>Hard</p></td>
+<td class="text-center"><p>Medium</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><strong>Complicated transforms</strong></p></td>
+<td class="text-center"><p>Impossible<sup>2</sup></p></td>
+<td class="text-center"><p>Medium</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><strong>Automation</strong></p></td>
+<td class="text-center"><p>Impossible<sup>2</sup></p></td>
+<td class="text-center"><p>Medium</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><strong>Making reusable</strong></p></td>
+<td class="text-center"><p>Limited<sup>3</sup></p></td>
+<td class="text-center"><p>Medium</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><strong>Large datasets</strong></p></td>
+<td class="text-center"><p>Impossible</p></td>
+<td class="text-center"><p>Hard</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<ol class="arabic simple">
+<li><p>These ratings are obviously subjective</p></li>
+<li><p>Not including scripting or external tools</p></li>
+<li><p>See <a class="reference external" href="https://support.google.com/docs/answer/12504534">Google Sheets named functions</a> and <a class="reference external" href="https://support.microsoft.com/en-us/office/lambda-function-bd212d27-1cd1-4321-a34a-ccbf254b8b67">Excel LAMBDA functions</a></p></li>
+</ol>
+</section>
+<section id="spreadsheet-scripting-automation">
+<h3>Spreadsheet scripting/automation<a class="headerlink" href="#spreadsheet-scripting-automation" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Google Sheets:</p>
+<ul>
+<li><p><a class="reference external" href="https://developers.google.com/apps-script/guides/sheets">Apps Script</a></p></li>
+<li><p><a class="reference external" href="https://support.google.com/docs/answer/14099459">Conditional notifications</a></p></li>
+</ul>
+</li>
+<li><p>Excel:</p>
+<ul>
+<li><p><a class="reference external" href="https://support.microsoft.com/en-us/office/create-custom-functions-in-excel-2f06c10b-3622-40d6-a1b2-b6748ae8231f">Custom functions</a></p></li>
+<li><p><a class="reference external" href="https://learn.microsoft.com/en-us/office/dev/scripts/overview/excel">Office Scripts</a> / <a class="reference external" href="https://learn.microsoft.com/en-us/office/dev/scripts/tutorials/excel-power-automate-manual">Power Automate</a></p></li>
+<li><p><a class="reference external" href="https://www.microsoft.com/en-us/microsoft-365/python-in-excel">Python in Excel</a></p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+<section id="python-vs-other-languages">
+<h2>Python vs. other languages<a class="headerlink" href="#python-vs-other-languages" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Good for general-purpose <em>and</em> data stuff</p></li>
+<li><p>Widely used in both industry and academia</p></li>
+<li><p>Relatively easy to learn</p></li>
+<li><p>Open source</p></li>
+</ul>
+<p><img alt="Python logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/110px-Python-logo-notext.svg.png" /></p>
+</section>
+<section id="where-to-python">
+<h2>Where to Python<a class="headerlink" href="#where-to-python" title="Link to this heading">#</a></h2>
+<p>Pyton can be run in:</p>
+<ul class="simple">
+<li><p>A text file, using the <code class="docutils literal notranslate"><span class="pre">python</span></code> command</p></li>
+<li><p><a class="reference external" href="https://www.python.org/shell/">The interactive Python interpreter / command prompt / shell</a></p></li>
+<li><p>An <a class="reference external" href="https://runestone.academy/ns/books/published/thinkcspy/Appendices/usingIDE.html">integrated development environment (IDE)</a>, such as:</p>
+<ul>
+<li><p>VSCode</p></li>
+<li><p><a class="reference external" href="https://www.jetbrains.com/pycharm/">PyCharm</a></p></li>
+<li><p><a class="reference external" href="https://www.spyder-ide.org/">Spyder</a></p></li>
+</ul>
+</li>
+<li><p>A <a class="reference external" href="https://docs.jupyter.org/en/latest/#what-is-a-notebook">Jupyter notebook</a></p>
+<ul>
+<li><p><a class="reference external" href="https://python-public-policy.afeld.me/en/columbia/resources.html#jupyter-outside-this-course">Various other tools</a> are built around them</p></li>
+<li><p>What we’ll be using for this class</p></li>
+</ul>
+</li>
+</ul>
+<p>Each can be on your computer (“local”), or in the cloud somewhere. All call <code class="docutils literal notranslate"><span class="pre">python</span></code> under the hood, more or less.</p>
+</section>
+<section id="pandas">
+<h2>Pandas<a class="headerlink" href="#pandas" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>A Python package (bundled up code that you can reuse)</p></li>
+<li><p>Very common for data science in Python</p></li>
+<li><p><a class="reference external" href="https://pandas.pydata.org/docs/getting_started/comparison/comparison_with_r.html">A lot like R</a></p>
+<ul>
+<li><p>Both organize around “data frames”</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="jupyter">
+<h2>Jupyter<a class="headerlink" href="#jupyter" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Alternative programming environment</p></li>
+<li><p>Supports Python by default, and other languages with added <a class="reference external" href="https://docs.jupyter.org/en/stable/projects/kernels.html">kernels</a></p></li>
+<li><p>Nicely displays output of your code so you can check and share the results</p></li>
+<li><p>Avoids using the command line</p></li>
+</ul>
+<section id="command-line-vs-jupyter">
+<h3>Command line vs. Jupyter<a class="headerlink" href="#command-line-vs-jupyter" title="Link to this heading">#</a></h3>
+<p><img alt="Command line vs. Jupyter output" src="img/cli_vs_jupyter.png" /></p>
+</section>
+</section>
+<section id="lab-8-prep">
+<h2><a class="reference internal" href="#lab_8.ipynb"><span class="xref myst">Lab 8</span></a> prep<a class="headerlink" href="#lab-8-prep" title="Link to this heading">#</a></h2>
+<p><a class="reference external" href="https://github.com/signup">Sign up for GitHub.</a></p>
+<ul class="simple">
+<li><p>If you have an account already, <a class="reference external" href="https://github.com/login">sign in</a>.</p></li>
+<li><p>A <a class="reference external" href="https://github.com/pricing">Free plan</a> is sufficient.</p></li>
+</ul>
+<section id="personal-site-folder-setup">
+<h3>Personal site folder setup<a class="headerlink" href="#personal-site-folder-setup" title="Link to this heading">#</a></h3>
+<p><em>[one-time]</em></p>
+<p>Create a folder (on your computer) called <code class="docutils literal notranslate"><span class="pre">[username].github.io</span></code>.</p>
+<ul class="simple">
+<li><p>Example: <code class="docutils literal notranslate"><span class="pre">afeld.github.io</span></code></p></li>
+<li><p>Do so <em>outside</em> of your <code class="docutils literal notranslate"><span class="pre">computing-in-context/</span></code> (or equivalent) folder.</p></li>
+<li><p>This is preparing us to make a <a class="reference external" href="https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages#types-of-github-pages-sites">“user site” on GitHub Pages</a>.</p>
+<ul>
+<li><p>If you already have one, use a <code class="docutils literal notranslate"><span class="pre">computing-in-context/</span></code> folder (new or existing) to make a <a class="reference external" href="https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages#types-of-github-pages-sites">“project site”</a>.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="folder-structure">
+<h3>Folder structure<a class="headerlink" href="#folder-structure" title="Link to this heading">#</a></h3>
+<p>You’ll have two parent/top-level/working folders:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Folder</p></th>
+<th class="head"><p>Contains</p></th>
+<th class="head"><p>Git repository*</p></th>
+<th class="head"><p>GitHub repository*</p></th>
+<th class="head"><p>GitHub Pages site*</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">[username].github.io/</span></code></p></td>
+<td><p><a class="reference external" href="https://computing-in-context.afeld.me/projects.html">Projects</a>; sharable work from other classes</p></td>
+<td><p>✅</p></td>
+<td><p>Public</p></td>
+<td><p>✅</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">computing-in-context/</span></code> (or equivalent)</p></td>
+<td><p>Labs, etc.</p></td>
+<td><p>Optional</p></td>
+<td><p>Optional, private only</p></td>
+<td><p>❌</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>*We haven’t done this yet.</p>
+<p>For this course, we’ll refer to these as “working folders”.</p>
+<ul class="simple">
+<li><p>In Python development, each working folder will generally:</p>
+<ul>
+<li><p>Contain multiple (related) files, potentially under sub-folders</p></li>
+<li><p>Manage its own dependencies, via its own:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code></p></li>
+<li><p>Virtual environment</p></li>
+</ul>
+</li>
+<li><p>Have its own version control</p>
+<ul>
+<li><p>Be a Git repository (it’ll contain <code class="docutils literal notranslate"><span class="pre">.git/</span></code>)</p></li>
+<li><p>Have a corresponding repository on GitHub (or equivalent)</p></li>
+<li><p>Have a <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code></p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>You’ll open each as a <a class="reference external" href="https://code.visualstudio.com/docs/editing/workspaces/workspaces">workspace in VSCode</a>, depending on what you’re working on.</p></li>
+</ul>
+<p>Like <a class="reference external" href="https://computing-in-context.afeld.me/lecture_15.html#python">the Python setup</a>, this is the recommended+supported structure. You <em>can</em> do something else, but you’re on your own.</p>
+</section>
+<section id="create-the-virtual-environment">
+<h3>Create the virtual environment<a class="headerlink" href="#create-the-virtual-environment" title="Link to this heading">#</a></h3>
+<p><em>[once per working folder]</em></p>
+<ol class="arabic">
+<li><p><a class="reference external" href="https://code.visualstudio.com/docs/getstarted/getting-started#_open-a-folder-in-vs-code">Open your <code class="docutils literal notranslate"><span class="pre">[username].github.io/</span></code> folder in VSCode.</a></p></li>
+<li><p><a class="reference external" href="https://code.visualstudio.com/docs/terminal/getting-started">Open a terminal.</a></p></li>
+<li><p>In the terminal, <a class="reference external" href="https://docs.python.org/3/library/venv.html#creating-virtual-environments">create a virtual environment</a>.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>.venv
+</pre></div>
+</div>
+</li>
+</ol>
+</section>
+<section id="install-initial-packages">
+<h3><a class="reference internal" href="#notebooks.md#installing-packages"><span class="xref myst">Install initial packages</span></a><a class="headerlink" href="#install-initial-packages" title="Link to this heading">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ipykernel</span>
+<span class="n">pandas</span>
+<span class="n">plotly</span>
+
+<span class="c1"># needed for plotly</span>
+<span class="n">nbformat</span>
+<span class="n">statsmodels</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="jupyter-continued">
+<h2>Jupyter, continued<a class="headerlink" href="#jupyter-continued" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p><a class="reference external" href="https://code.visualstudio.com/docs/datascience/jupyter-notebooks#_create-or-open-a-jupyter-notebook">Create a <code class="docutils literal notranslate"><span class="pre">lecture_16_example.ipynb</span></code> file.</a></p></li>
+<li><p><em>Walk through the Jupyter interface.</em></p></li>
+<li><p>Copy in <a class="reference external" href="https://plotly.com/python/linear-fits/#Linear-fit-trendlines-with-Plotly-Express">this example</a>.</p></li>
+<li><p><a class="reference external" href="https://code.visualstudio.com/docs/datascience/jupyter-notebooks#_running-cells">Run it.</a></p>
+<ol class="arabic simple">
+<li><p><a class="reference external" href="https://code.visualstudio.com/docs/datascience/jupyter-notebooks#_create-or-open-a-jupyter-notebook">Select the kernel.</a> <em>[once per notebook]</em></p></li>
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">Install</span> <span class="pre">suggested</span> <span class="pre">extensions</span></code>, if it asks. <em>[once per computer]</em></p></li>
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">Python</span> <span class="pre">Environments…</span></code>.</p></li>
+<li><p>Select the <code class="docutils literal notranslate"><span class="pre">python</span></code> under the virtual environment.</p>
+<ul class="simple">
+<li><p>Mac: <code class="docutils literal notranslate"><span class="pre">.venv/bin/python</span></code></p></li>
+<li><p>Windows: <code class="docutils literal notranslate"><span class="pre">.venv\Scripts\python.exe</span></code></p></li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+<section id="common-issues">
+<h3>Common issues<a class="headerlink" href="#common-issues" title="Link to this heading">#</a></h3>
+<p>We’ve run into issues with being unable to <a class="reference external" href="https://code.visualstudio.com/docs/datascience/jupyter-notebooks#_create-or-open-a-jupyter-notebook">select the kernel</a>. Try each of the following:</p>
+<ul class="simple">
+<li><p>Ensure you’re on the latest versions of:</p>
+<ul>
+<li><p><a class="reference external" href="https://code.visualstudio.com/docs/setup/setup-overview#_update-cadence">VSCode</a></p></li>
+<li><p><a class="reference external" href="https://code.visualstudio.com/docs/configure/extensions/extension-marketplace#_extensions-view-filter-and-commands">The extensions</a></p></li>
+</ul>
+</li>
+<li><p>Restart VSCode (quitting the full app, not just the window).</p></li>
+<li><p><a class="reference external" href="https://stackoverflow.com/a/65422671/358804">Mac: “The application is on a read-only volume.”</a></p></li>
+<li><p>Confirm that <a class="reference internal" href="#create-the-virtual-environment">the packages were installed in the virtual environment</a>, not <a class="reference external" href="https://packaging.python.org/en/latest/tutorials/installing-packages/#creating-virtual-environments">globally</a>.</p></li>
+</ul>
+</section>
+<section id="using-multiple-cells">
+<h3>Using multiple cells<a class="headerlink" href="#using-multiple-cells" title="Link to this heading">#</a></h3>
+<p><em>Show each step in their own cell:</em></p>
+<ol class="arabic simple">
+<li><p><em>Data loading</em></p></li>
+<li><p><em>Displaying the <code class="docutils literal notranslate"><span class="pre">df</span></code></em></p></li>
+<li><p><em>Creating the chart</em></p></li>
+</ol>
+<p>FYI <code class="docutils literal notranslate"><span class="pre">px.data.tips()</span></code> loads one of <a class="reference external" href="https://plotly.com/python-api-reference/generated/plotly.express.data.html">Plotly’s sample datasets</a>. That’s not needed when plotting other datasets.</p>
+<p>We’ll learn more about pandas and plotly soon.</p>
+</section>
+<section id="jupyter-basics">
+<h3>Jupyter basics<a class="headerlink" href="#jupyter-basics" title="Link to this heading">#</a></h3>
+<p>A “cell” can be either code or <a class="reference external" href="https://www.markdownguide.org/getting-started/">Markdown</a> (text). Raw Markdown looks like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">## A heading</span>
+
+<span class="n">Plain</span> <span class="n">text</span>
+
+<span class="p">[</span><span class="n">A</span> <span class="n">link</span><span class="p">](</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">somewhere</span><span class="o">.</span><span class="n">com</span><span class="p">)</span>
+</pre></div>
+</div>
+<section id="running">
+<h4>Running<a class="headerlink" href="#running" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p>You “run” a cell by either:</p>
+<ul>
+<li><p>Pressing the ▶️ button</p></li>
+<li><p>Pressing <code class="docutils literal notranslate"><span class="pre">Control</span></code>+<code class="docutils literal notranslate"><span class="pre">Enter</span></code> on your keyboard</p></li>
+</ul>
+</li>
+<li><p>Cells don’t run unless you tell them to, in the order you do so</p>
+<ul>
+<li><p>Generally, you want to do so from the top every time you open a notebook</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="output">
+<h4>Output<a class="headerlink" href="#output" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p>The last thing in a code cell is what gets displayed when it’s run</p></li>
+<li><p>The output gets saved as part of the notebook</p></li>
+<li><p>Just because there’s existing output from a cell, doesn’t mean that cell has been run during this session</p></li>
+</ul>
+</section>
+</section>
+<section id="hosted-notebooks">
+<h3>Hosted notebooks<a class="headerlink" href="#hosted-notebooks" title="Link to this heading">#</a></h3>
+<p>Jupyter can run on on your computer (“local”), or in the cloud somewhere. <a class="reference external" href="https://python-public-policy.afeld.me/en/columbia/resources.html#jupyter-outside-this-course">Many options.</a></p>
+</section>
+<section id="some-best-practices">
+<h3>Some best practices<a class="headerlink" href="#some-best-practices" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Make variable names descriptive</p></li>
+<li><p>Only do one thing per line</p>
+<ul>
+<li><p>Makes troubleshooting easier</p></li>
+</ul>
+</li>
+<li><p>Make notebooks <a class="reference external" href="https://en.wikipedia.org/wiki/Idempotence">idempotent</a></p>
+<ul>
+<li><p>Makes your work reproducible</p></li>
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">Restart</span></code> then <code class="docutils literal notranslate"><span class="pre">Run</span> <span class="pre">all</span></code> buttons in toolbar</p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -389,9 +795,41 @@ document.write(`
     <i class="fa-solid fa-list"></i> Contents
   </div>
   <nav class="bd-toc-nav page-toc">
-    <ul class="simple visible nav section-nav flex-column">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spreadsheets-vs-programming-languages">Spreadsheets vs. programming languages</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-spreadsheets">Why spreadsheets</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-programming-languages">Why programming languages</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#side-by-side1">Side-by-side<sup>1</sup></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spreadsheet-scripting-automation">Spreadsheet scripting/automation</a></li>
 </ul>
-
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-vs-other-languages">Python vs. other languages</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#where-to-python">Where to Python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pandas">Pandas</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jupyter">Jupyter</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#command-line-vs-jupyter">Command line vs. Jupyter</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lab-8-prep"><span class="xref myst">Lab 8</span> prep</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#personal-site-folder-setup">Personal site folder setup</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#folder-structure">Folder structure</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-the-virtual-environment">Create the virtual environment</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-initial-packages"><span class="xref myst">Install initial packages</span></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jupyter-continued">Jupyter, continued</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#common-issues">Common issues</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-multiple-cells">Using multiple cells</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#jupyter-basics">Jupyter basics</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#running">Running</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#output">Output</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hosted-notebooks">Hosted notebooks</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#some-best-practices">Some best practices</a></li>
+</ul>
+</li>
+</ul>
   </nav></div>
 
 </div></div>
